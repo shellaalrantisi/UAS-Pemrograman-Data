@@ -3,7 +3,7 @@ using namespace std;
 
 void main() {
     //Matriks
-    int matriks[3][3] = {
+    double matriks[3][3] = {
         {4, 2, 8},
         {2, 1, 5},
         {3, 2, 4}
@@ -24,7 +24,7 @@ void main() {
     cout << "===============" << endl;
 
     //Menghitung determinan matriks
-    int determinan;
+    double determinan;
     determinan = matriks[0][0] * matriks[1][1] * matriks[2][2] + matriks[0][1] * matriks[1][2] * matriks[2][0] + matriks[0][2] * matriks[1][0] * matriks[2][1] -
         matriks[0][2] * matriks[1][1] * matriks[2][0] - matriks[0][0] * matriks[1][2] * matriks[2][1] - matriks[0][1] * matriks[1][0] * matriks[2][2];
 
@@ -38,7 +38,7 @@ void main() {
     cout << "===============" << endl;
 
     // Matriks kofaktor
-    int kofaktor[3][3];
+    double kofaktor[3][3];
     kofaktor[0][0] = matriks[1][1] * matriks[2][2] - matriks[1][2] * matriks[2][1];
     kofaktor[0][1] = -(matriks[1][0] * matriks[2][2] - matriks[1][2] * matriks[2][0]);
     kofaktor[0][2] = matriks[1][0] * matriks[2][1] - matriks[1][1] * matriks[2][0];
