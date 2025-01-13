@@ -50,7 +50,7 @@ void main() {
     kofaktor[2][2] = matriks[0][0] * matriks[1][1] - matriks[0][1] * matriks[1][0];
 
     //Matriks adjoin (transpose dari kofaktor)
-    float adjoin[3][3];
+    double adjoin[3][3];
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             adjoin[i][j] = kofaktor[j][i];
@@ -58,10 +58,10 @@ void main() {
     }
 
     //Matriks invers
-    float inversMatriks[3][3];
+    double inversMatriks[3][3];
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            inversMatriks[i][j] = adjoin[i][j] / (float)determinan;
+            inversMatriks[i][j] = adjoin[i][j] / determinan;
         }
     }
 
